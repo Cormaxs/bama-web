@@ -1,0 +1,17 @@
+{
+  "name": "BAMA Fotografía",
+  "short_name": "BAMA",
+  "description": "Portafolio fotográfico de BAMA en Catamarca y Tucumán.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#14110f",
+  "theme_color": "#14110f",
+  "icons": [
+    {
+      "src": "/logo-Blanco.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}

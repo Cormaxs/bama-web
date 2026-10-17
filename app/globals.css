@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  /* Warm premium palette with requested light tonal accents while preserving the black base */
+  --background: #14110f;
+  --background-strong: #1b1816;
+  --panel: #1f1c1a;
+  --panel-soft: #2b2624;
+  --foreground: #f3f4f6;
+  --foreground-soft: #fdfdfd;
+  --muted: #d7d9e8;
+  --accent: #9d9edc;
+  --accent-strong: #8386c9;
+  --accent-soft: rgba(157, 158, 220, 0.18);
+  --border: rgba(243, 244, 246, 0.1);
+  --shadow: rgba(12, 9, 8, 0.42);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(157, 158, 220, 0.18), transparent 30%),
+    linear-gradient(180deg, #14110f 0%, #120f0d 100%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(157, 158, 220, 0.26);
+  color: var(--foreground-soft);
+}
+
+a {
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Utility tokens for components that read CSS variables */
+.accent {
+  color: var(--accent);
+}
+.bg-accent {
+  background-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
